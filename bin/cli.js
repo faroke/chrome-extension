@@ -15,15 +15,16 @@ function runCommand(command){
 const repoName = process.argv[2];
 const gitCheckoutCommand = `git clone --depth 1 https://github.com/faroke/chrome-extension ${repoName}`;
 const installDepsCommand = `cd ${repoName} && npm install`;
-console.log(`Coling the repository with name ${repoName}`);
+console.log('\x1b[33m%s\x1b[0m', "Hi, i'm gonna build this starter kit for you !")
+console.log('\x1b[33m%s\x1b[0m',`Coling the repository with name ${repoName}`);
 const checkedOut = runCommand(gitCheckoutCommand);
 if(!checkedOut) process.exit(-1);
-console.log(`Installing dependencies for ${repoName}`);
+console.log('\x1b[33m%s\x1b[0m',`Installing dependencies for ${repoName}`);
 const installedDeps = runCommand(installDepsCommand);
 if(!installedDeps) process.exit(-1);
-
-console.log("Congrats !");
-console.log(`cd ${repoName} && npm run build`);
+console.log('\x1b[34m%s\x1b[0m', "Congrats !");
+console.log('');
+console.log('\x1b[36m%s\x1b[0m', `cd ${repoName} && npm run build`)
 /*
 const args = process.argv.slice(2);
 if (args.length < 2) {
