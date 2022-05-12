@@ -1,7 +1,7 @@
 {
-  "name": "chrome-extension",
+  "name": "@faroke/chrome-extension",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple chrome extension starter kit",
   "main": "index.js",
   "bin": {
     "chrome-extension": "bin/cli.js"
