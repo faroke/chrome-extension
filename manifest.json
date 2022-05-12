@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Chrome Extension Starter",
+  "version": "1.0.0",
+  "description": "",
+  "icons": {
+    "48": "assets/icons/32.png"
+  },
+  "action": {
+    "default_icon": {
+      "32": "assets/icons/32.png"
+    },
+    "default_popup": "popup/index.html",
+    "default_title": "Starter Popup"
+  },
+  "web_accessible_resources": [{
+    "resources": [
+      "assets/icons/*.png"
+    ],
+    "matches": [],
+    "extension_ids": []
+  }],
+  "permissions": [
+    "tabs",
+    "<all_urls>",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*/*"
+  ]
+}

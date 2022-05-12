@@ -1,0 +1,49 @@
+{
+  "name": "chrome-extension",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "chrome-extension": "bin/cli.js"
+  },
+  "scripts": {
+    "clear": "rm -rf dist .cache",
+    "build:popup": "parcel build src/popup/index.html -d dist/popup --public-url ./ --no-source-maps"
+  },
+  "alias": {
+    "react": "preact/compat",
+    "react-dom/test-utils": "preact/test-utils",
+    "react-dom": "preact/compat"
+  },
+  "staticFiles": {
+    "staticPath": [
+      {
+        "staticPath": "assets",
+        "staticOutDir": "../assets/"
+      },
+      {
+        "staticPath": "manifest.json",
+        "staticOutDir": "../"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "parcel-bundler": "^1.12.5",
+    "parcel-plugin-static-files-copy": "^2.6.0"
+  },
+  "dependencies": {
+    "preact": "^10.7.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/faroke/chrome-extension.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/faroke/chrome-extension/issues"
+  },
+  "homepage": "https://github.com/faroke/chrome-extension#readme"
+}
