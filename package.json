@@ -8,7 +8,13 @@
   },
   "scripts": {
     "clear": "rm -rf dist .cache",
-    "build:popup": "parcel build src/popup/index.html -d dist/popup --public-url ./ --no-source-maps"
+    "build:background": "parcel build src/background/index.js -d dist/background --no-source-maps",
+    "build:content": "parcel build src/content/index.js -d dist/content --no-source-maps",
+    "build:popup": "parcel build src/popup/index.html -d dist/popup --public-url ./ --no-source-maps",
+    "build:options": "parcel build src/options/index.html -d dist/options --public-url ./ --no-source-maps",
+    "build:devtools": "parcel build src/devtools/index.html -d dist/devtools --public-url ./ --no-source-maps",
+    "build:devtools:app": "parcel build src/devtools/app/index.html -d dist/devtools/app --public-url ./ --no-source-maps",
+    "build": "npm run clear && npm run build:background && npm run build:content && npm run build:options && npm run build:popup && npm run build:devtools && npm run build:devtools:app"
   },
   "alias": {
     "react": "preact/compat",

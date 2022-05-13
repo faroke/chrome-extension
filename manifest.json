@@ -4,15 +4,28 @@
   "version": "1.0.0",
   "description": "",
   "icons": {
-    "48": "assets/icons/32.png"
+    "48": "assets/preact-icon.png"
   },
   "action": {
     "default_icon": {
-      "32": "assets/icons/32.png"
+      "32": "assets/preact-icon.png"
     },
     "default_popup": "popup/index.html",
     "default_title": "Starter Popup"
   },
+  "content_scripts": [
+    {
+      "js": [
+        "content/index.js"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "background": {
+    "service_worker": "background/index.js"
+  },
+  "options_page": "options/index.html",
+  "devtools_page": "devtools/index.html",
   "web_accessible_resources": [{
     "resources": [
       "assets/icons/*.png"
